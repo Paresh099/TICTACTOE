@@ -1,18 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'splash_screen.dart';
 
 void main() async {
   // Ensure Flutter widgets are initialized
   WidgetsFlutterBinding.ensureInitialized();
-
-  try {
-    // Initialize Firebase
-    await Firebase.initializeApp();
-    print('Firebase initialized successfully');
-  } catch (e) {
-    print('Error initializing Firebase: $e');
-  }
 
   runApp(TicTacToeApp());
 }
